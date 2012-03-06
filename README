@@ -1,3 +1,7 @@
+This is a very small app to let you easily add Country/City selects with filtering. So you pick a country and it filters the list of cities. The data is from http://www.geonames.org/ so you better make sure you satisfy their licensing conditions. :)
+
+I'm pretty responsive, so please flame, or preferrably contribute patches!
+
 1. Download the files:
     http://download.geonames.org/export/dump/countryInfo.txt
     http://download.geonames.org/export/dump/cities1000.zip
@@ -14,7 +18,7 @@
 
 5. Use the location form:
 	from simplecitites.forms import LocationForm
-	def caster_details(request):
+	def location_details(request):
 		location_form = LocationForm(request.POST or None)
 		return render(request,'some_template.html',{
 			"location_form": location_form
