@@ -25,7 +25,7 @@ Then call this like:
         self.stdout.write("cities path:\t%s\ncountries path:\t%s\n" %
             (cities_path,country_path))
 
-        #self.load_countries(open(country_path,"rU"))
+        self.load_countries(open(country_path,"rU"))
         self.load_cities(open(cities_path, "rU"))
 
 
