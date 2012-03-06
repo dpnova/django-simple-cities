@@ -12,10 +12,10 @@
 5. Use the location form:
 	from simplecitites.forms import LocationForm
 	def caster_details(request):
-    	location_form = LocationForm(request.POST or None)
-    	return render(request,'some_template.html',{
-        	"location_form": location_form
-    	})
+		location_form = LocationForm(request.POST or None)
+		return render(request,'some_template.html',{
+			"location_form": location_form
+		})
 
 6. Render the form in the template:
 	{{ location_form }}
