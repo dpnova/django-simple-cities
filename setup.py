@@ -1,4 +1,4 @@
-rom setuptools import setup, find_packages
+from setuptools import setup, find_packages
 
 setup(name="django-simple-cities",
            version="0.1",
