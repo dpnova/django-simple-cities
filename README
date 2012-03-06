@@ -2,7 +2,10 @@
     http://download.geonames.org/export/dump/countryInfo.txt
     http://download.geonames.org/export/dump/cities1000.zip
 
-2. Add "simplecities" and "smart_selects" (pip install smart-selects) to your INSTALLED_APPS setting.
+2. Add "simplecities" and "smart_selects" (pip install smart-selects) to your INSTALLED_APPS setting. smart-selects: https://github.com/digi604/django-smart-selects
+
+3. Add the required smart-selects urls:
+	url(r'^chaining/', include('smart_selects.urls')),
 
 3. Run "./manage.py syncdb" (or "./manage.py migrate simplecities" if you use South)
 
