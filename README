@@ -1,0 +1,21 @@
+1. Download the files:
+    http://download.geonames.org/export/dump/countryInfo.txt
+    http://download.geonames.org/export/dump/cities1000.zip
+
+2. Add "simplecities" and "smart_selects" (pip install smart-selects) to your INSTALLED_APPS setting.
+
+3. Run "./manage.py syncdb" (or "./manage.py migrate simplecities" if you use South)
+
+4. Run the command to load the data:
+ 	manage loadsimplecities /path/to/cities1000.txt /path/to/countryInfo.txt
+
+5. Use the location form:
+	from simplecitites.forms import LocationForm
+	def caster_details(request):
+    	location_form = LocationForm(request.POST or None)
+    	return render(request,'some_template.html',{
+        	"location_form": location_form
+    	})
+
+6. Render the form in the template:
+	{{ location_form }}
