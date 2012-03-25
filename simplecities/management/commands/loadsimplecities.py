@@ -16,7 +16,7 @@ class Command(BaseCommand):
             """
 Please grab these files:
     http://download.geonames.org/export/dump/countryInfo.txt
-    http://download.geonames.org/export/dump/cities1000.zip
+    http://download.geonames.org/export/dump/cities15000.zip
 
 Then call this like:
     manage loadsimplecities /path/to/cities1000.txt /path/to/countryInfo.txt

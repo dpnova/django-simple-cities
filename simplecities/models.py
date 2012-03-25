@@ -42,5 +42,3 @@ class Location(models.Model):
     def __unicode__(self):
         return u"%s, %s" % (self.city.name, self.country.name)
 
-    class Meta:
-        unique_together = ('country','city')
